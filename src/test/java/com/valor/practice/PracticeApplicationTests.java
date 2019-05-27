@@ -17,7 +17,6 @@ import java.util.UUID;
 @SpringBootTest
 @Slf4j
 public class PracticeApplicationTests {
-
    @Autowired
    private OrderSender orderSender;
 
