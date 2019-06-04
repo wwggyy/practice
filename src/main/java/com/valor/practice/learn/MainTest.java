@@ -1,5 +1,9 @@
 package com.valor.practice.learn;
 
+import org.springframework.aop.framework.DefaultAopProxyFactory;
+
+import java.util.Collections;
+
 /**
  * @Description TODO
  * @Author valor.wang
@@ -7,16 +11,6 @@ package com.valor.practice.learn;
  **/
 public class MainTest {
     public static void main(String[] args) {
-        int i = 0;
-        try {
-            System.out.println("I am try");
-            i =2;
-            return;
-        }catch (Exception e){
-
-        }finally {
-            i=4;
-            System.out.println("finally,i="+i);
-        }
+         
     }
 }
