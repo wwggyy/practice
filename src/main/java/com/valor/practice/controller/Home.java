@@ -1,5 +1,6 @@
 package com.valor.practice.controller;
 
+import com.valor.practice.learn.annotation.MethodAop;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Home {
     @GetMapping("/home")
+    @MethodAop("method1")
     public String method1(@RequestParam String hello){
         return hello;
     }

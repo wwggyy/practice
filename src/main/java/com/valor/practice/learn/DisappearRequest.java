@@ -21,7 +21,6 @@ public class DisappearRequest {
 }
 
 class ObjectLock implements Runnable {
-
     private int a = 0;
 
     public int getA() {
@@ -41,6 +40,7 @@ class ObjectLock implements Runnable {
             System.out.println("我是对象锁的块形式:" + Thread.currentThread().getName());
             try {
                 Thread.sleep(3000);
+                System.out.println(this.toString());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

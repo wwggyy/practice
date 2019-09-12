@@ -1,5 +1,6 @@
 package com.valor.practice.producter;
 
+
 /**
  * @Description TODO
  * @Author valor.wang
@@ -17,5 +18,6 @@ public class TestMain {
 
         t0.start();
         t1.start();
+
     }
 }

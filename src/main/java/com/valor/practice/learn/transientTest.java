@@ -3,6 +3,7 @@ package com.valor.practice.learn;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * @Description transient是Java语言的关键字，用来表示一个域不是该对象串行化的一部分。
