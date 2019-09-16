@@ -5,9 +5,9 @@ package com.valor.practice.learn.structure;
  * @date: 2019/9/11 11:13
  * Description:  循环队列
  */
-public class Queue {
+public class Queue<E> implements IQueue{
 
-    private int [] queArray;
+    private Object [] queArray;
     private int maxSize;
     private int front;   //存储队头元素的下标
     private int rear;    //存储队尾元素的下标
@@ -16,14 +16,15 @@ public class Queue {
     //构造方法，初始化队列
     public Queue(int maxSize){
         this.maxSize = maxSize;
-        queArray = new int [maxSize];
+        queArray = new Object [maxSize];
         front = 0;
         rear = -1;
         length = 0;
     }
 
     //插入
-    public void insert(int elem) throws Exception{
+    @Override
+    public boolean insert(Object o) throws Exception{
         if(isFull()){
             throw new Exception("队列已满，不能进行插入操作！");
         }
@@ -31,16 +32,18 @@ public class Queue {
         if(rear == maxSize-1){
             rear = -1;
         }
-        queArray[++rear] = elem;
+        queArray[++rear] = o;
         length++;
+        return true;
     }
 
+
     //移除
-    public int remove() throws Exception{
+    public E remove() throws Exception{
         if(isEmpty()){
             throw new Exception("队列为空，不能进行移除操作！");
         }
-        int elem = queArray[front++];
+        E elem = (E)queArray[front++];
         //如果队头指针已到达数组末端，则移到数组第一个位置
         if(front == maxSize){
             front = 0;
@@ -50,11 +53,11 @@ public class Queue {
     }
 
     //查看队头元素
-    public int peek() throws Exception{
+    public E peek() throws Exception{
         if(isEmpty()){
             throw new Exception("队列内没有元素！");
         }
-        return queArray[front];
+        return (E)queArray[front];
     }
 
     //获取队列长度

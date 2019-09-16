@@ -1,18 +1,10 @@
 package com.valor.practice.learn;
 
-<<<<<<< Updated upstream
-import org.springframework.aop.framework.DefaultAopProxyFactory;
 
-import java.util.Collections;
-=======
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Future;
-import java.util.concurrent.locks.Condition;
->>>>>>> Stashed changes
+
 
 /**
  * @Description TODO
@@ -21,9 +13,7 @@ import java.util.concurrent.locks.Condition;
  **/
 public class MainTest {
     public static void main(String[] args) {
-<<<<<<< Updated upstream
-         
-=======
+
         //函数式接口
         Functional f = ()->{
             System.out.println("f");
@@ -62,6 +52,5 @@ public class MainTest {
 
 
 
->>>>>>> Stashed changes
     }
 }

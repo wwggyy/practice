@@ -7,10 +7,8 @@ import java.net.URL;
 
 import java.time.*;
 
-import java.util.ArrayList;
+import java.util.*;
 
-import java.util.List;
-import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,14 +18,34 @@ import java.util.regex.Pattern;
  * Description:
  */
 public class TestMe {
+ private static int MAXIMUM_CAPACITY = 1<<8;
+   static int tableSizeFor(int cap) {
+        int n = cap - 1;
+        n |= n >>> 1;
+        n |= n >>> 2;
+        n |= n >>> 4;
+        n |= n >>> 8;
+        n |= n >>> 16;
+        return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
+    }
+
     public static void main(String[] args) {
         String s = "01139942(夏梦君),01368324(王刚勇),01373820(李怀根),01372231(朱利斌),01198769(黄圣权),368324(他)";
 //        Pattern p = Pattern.compile("[0-9]+");
         Pattern p = Pattern.compile("[^0-9]?01139942[^0-9]+");
         Matcher m = p.matcher(s);
         List<String> list = new ArrayList<>(1<<3);
-        boolean f1 = list instanceof List;
-        boolean f2 = list instanceof ArrayList;
+
+        Set set = new HashSet(1<<3);
+        //1. 能否初始化容量为10的hashmap
+//        System.out.println(tableSizeFor(10));
+
+        //2. map1的实际容量是多少?
+        Map<String,Object> map1 = new HashMap<>(10);
+        System.out.println(map1.size());
+        //3. 为什么说hashmap 非安全, 线程安全问题触发条件
+
+        //4. HashMap 使用了 数组 链表 红黑树方式存储数据
 //        while (m.find()){
 //            list.add(m.group());
 //        }

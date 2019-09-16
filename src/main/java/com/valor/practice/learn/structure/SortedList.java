@@ -27,9 +27,7 @@ public class SortedList {
         }else{
             previous.next = link;
         }
-
         link.next = cur;
-
     }
 
     //删除第一个链结点，返回删除的链结点引用
