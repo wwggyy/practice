@@ -1,5 +1,7 @@
 package com.valor.practice.learn;
 
+import com.valor.practice.learn.Generics.Animal;
+
 import javax.activation.DataHandler;
 import java.io.File;
 import java.net.MalformedURLException;
@@ -38,7 +40,7 @@ public class TestMe {
 
         Set set = new HashSet(1<<3);
         //1. 能否初始化容量为10的hashmap
-//        System.out.println(tableSizeFor(10));
+        System.out.println(tableSizeFor(17));
 
         //2. map1的实际容量是多少?
         Map<String,Object> map1 = new HashMap<>(10);
@@ -46,6 +48,9 @@ public class TestMe {
         //3. 为什么说hashmap 非安全, 线程安全问题触发条件
 
         //4. HashMap 使用了 数组 链表 红黑树方式存储数据
+        Map<String,String> map = new HashMap<>(1<<3);
+
+
 //        while (m.find()){
 //            list.add(m.group());
 //        }

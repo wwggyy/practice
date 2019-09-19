@@ -11,11 +11,11 @@ import lombok.extern.slf4j.Slf4j;
 public class UserDao implements IUserDao{
     @Override
     public void save() {
-        log.info("from {} - {}","UserDao","save");
+        System.out.println("UserDao -- save ");
     }
 
     @Override
     public void find() {
-        log.info("from {} - {}","UserDao","find");
+        System.out.println("UserDao -- find ");
     }
 }

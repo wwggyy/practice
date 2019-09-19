@@ -25,12 +25,12 @@ public class ProxyFactory {
     public Object getProxyInstance() {
       return Proxy.newProxyInstance(
                 target.getClass().getClassLoader(),
-                target.getClass().getInterfaces(), (Object pro, Method method, Object[] args)->{
+                target.getClass().getInterfaces(), (pro, method, args)->{
                         String methodName = method.getName();
                         if("find".equals(methodName)){
-                            log.info("proxy: {}","find");
+                            System.out.println("ProxyFactory  find");
                         }else {
-                            log.info("come proxy : {}","save");
+                            System.out.println("ProxyFactory  save");
                         }
                         return method.invoke(target,args);
                 });

@@ -15,7 +15,7 @@ import java.util.concurrent.locks.ReentrantLock;
 @Slf4j
 public class LockResource {
     int max = 5;
-    LinkedList<Integer> ProdLine = new LinkedList<Integer>();
+    LinkedList<Integer> ProdLine = new LinkedList<>();
     Lock lock = new ReentrantLock();
     Condition full = lock.newCondition();
     Condition empty = lock.newCondition();
