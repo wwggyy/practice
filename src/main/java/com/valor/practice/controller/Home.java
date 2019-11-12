@@ -18,8 +18,8 @@ public class Home {
     private ApplicationService applicationService;
     @GetMapping("/home")
     @MethodAop("method1")
-    public String method1(@RequestParam String hello){
+    public String method1(){
         applicationService.mockedClient();
-        return hello;
+        return "hello";
     }
 }

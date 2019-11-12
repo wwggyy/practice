@@ -25,13 +25,9 @@ eureka:
     service-url:
       defaultZone: http://120.79.208.188:8761/eureka
 server:
-  port: 8083
+  port: 8090
   servlet:
     context-path: /
 logging:
   level:
-    com:
-      valor:
-        practice:
-          mapper:
-            DEBUG
+    root: info

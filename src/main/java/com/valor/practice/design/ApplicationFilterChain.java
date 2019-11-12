@@ -2,7 +2,6 @@ package com.valor.practice.design;
 
 import org.apache.catalina.core.ApplicationFilterConfig;
 
-import javax.servlet.Filter;
 import javax.servlet.Servlet;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
