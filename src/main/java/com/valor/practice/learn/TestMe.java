@@ -1,6 +1,7 @@
 package com.valor.practice.learn;
 
 import com.valor.practice.learn.Generics.Animal;
+import org.springframework.util.StringUtils;
 
 import javax.activation.DataHandler;
 import java.io.File;
@@ -9,6 +10,7 @@ import java.net.URL;
 
 import java.time.*;
 
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import java.util.regex.Matcher;
@@ -41,6 +43,8 @@ public class TestMe {
         Set set = new HashSet(1<<3);
         //1. 能否初始化容量为10的hashmap
         System.out.println(tableSizeFor(17));
+        LocalDateTime time = LocalDateTime.now();
+        System.out.println("time=="+time.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:ss:mm")));
 
         //2. map1的实际容量是多少?
         Map<String,Object> map1 = new HashMap<>(10);
@@ -50,6 +54,27 @@ public class TestMe {
         //4. HashMap 使用了 数组 链表 红黑树方式存储数据
         Map<String,String> map = new HashMap<>(1<<3);
 
+        int count =0;
+        int amount = 0;
+        int am = 0;
+        for(int i=0;i<360;i++){
+            am= 4369-count;
+            amount = amount + am;
+            count = count+6;
+        }
+        System.out.println("count=="+count);
+        System.out.println("amount=="+amount);
+        System.out.println("am=="+am);
+        String s1 = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHssmm"));
+        System.out.println("s==="+ s1);
+
+        String validated = "失效";
+        boolean f = !StringUtils.hasText(validated) || ("有效".equals(validated) || "失效".equals(validated));
+        System.out.println("f=="+f);
+        String moduleIdList="a,b,v,c";
+        String[] s3 = moduleIdList.split(",");
+        List<String> list1 = Arrays.asList(s3);
+        System.out.println(list1);
 
 //        while (m.find()){
 //            list.add(m.group());
@@ -85,4 +110,5 @@ public class TestMe {
 //            e.printStackTrace();
 //        }
     }
+
 }

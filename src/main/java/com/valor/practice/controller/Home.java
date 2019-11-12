@@ -1,6 +1,8 @@
 package com.valor.practice.controller;
 
+import com.valor.practice.design.ApplicationService;
 import com.valor.practice.learn.annotation.MethodAop;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,9 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 public class Home {
+    @Autowired
+    private ApplicationService applicationService;
     @GetMapping("/home")
     @MethodAop("method1")
     public String method1(@RequestParam String hello){
+        applicationService.mockedClient();
         return hello;
     }
 }
