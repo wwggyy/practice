@@ -1,6 +1,4 @@
-package com.valor.practice.design;
-
-import lombok.extern.slf4j.Slf4j;
+package com.valor.practice.design.flyweight;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +10,7 @@ import java.util.Map;
  */
 public class Library {
 
-    private static Map<String,Book> pool = new HashMap<>(1<<4);
+    private static Map<String, Book> pool = new HashMap<>(1<<4);
 
     public static Book getBook(String code){
         Book book = null;

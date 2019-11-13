@@ -1,5 +1,6 @@
-package com.valor.practice.design;
+package com.valor.practice.design.responsibility;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,10 +9,11 @@ import org.springframework.stereotype.Component;
  * Description:
  */
 @Component
-public class TimesFilter implements Filter{
+@Slf4j
+public class TimesFilter implements Filter {
     @Override
     public boolean filter(Task task) {
-        System.out.println("次数限制检验");
+        log.info("次数限制检验");
         return true;
     }
 }

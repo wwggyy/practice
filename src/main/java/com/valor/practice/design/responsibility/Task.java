@@ -1,4 +1,4 @@
-package com.valor.practice.design;
+package com.valor.practice.design.responsibility;
 
 /**
  * @author: 01368324(王刚勇)

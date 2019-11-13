@@ -1,5 +1,6 @@
-package com.valor.practice.design;
+package com.valor.practice.design.responsibility;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,10 +9,11 @@ import org.springframework.stereotype.Component;
  * Description:
  */
 @Component
-public class RiskFilter implements Filter{
+@Slf4j
+public class RiskFilter implements Filter {
     @Override
     public boolean filter(Task task) {
-        System.out.println("风控拦截");
+        log.info("风控拦截");
         return true;
     }
 }

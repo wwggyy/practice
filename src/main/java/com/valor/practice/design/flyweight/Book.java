@@ -1,4 +1,4 @@
-package com.valor.practice.design;
+package com.valor.practice.design.flyweight;
 
 import lombok.Data;
 

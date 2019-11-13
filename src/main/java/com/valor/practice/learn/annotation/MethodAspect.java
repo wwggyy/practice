@@ -1,5 +1,6 @@
 package com.valor.practice.learn.annotation;
 
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -17,6 +18,7 @@ import java.lang.reflect.Method;
  */
 @Aspect
 @Component
+@Slf4j
 public class MethodAspect {
 
     @Pointcut("@annotation(com.valor.practice.learn.annotation.MethodAop)") // 注解声明切点，注解的全限定名
@@ -29,7 +31,6 @@ public class MethodAspect {
         Method method = methodSignature.getMethod();
         String name = method.getName();
         MethodAop annotation = method.getAnnotation(MethodAop.class);
-        System.out.println("拦截 : " + name+"方法执行");
-        System.out.println(">>>: " + annotation.value());
+        log.info("拦截 : {} 方法执行",name);
     }
 }

@@ -1,6 +1,5 @@
 package com.valor.practice.learn;
 
-import com.valor.practice.learn.Generics.Animal;
 import org.springframework.util.StringUtils;
 
 import javax.activation.DataHandler;
@@ -36,10 +35,10 @@ public class TestMe {
     public static void main(String[] args) {
         String s = "01139942(夏梦君),01368324(王刚勇),01373820(李怀根),01372231(朱利斌),01198769(黄圣权),368324(他)";
 //        Pattern p = Pattern.compile("[0-9]+");
+
         Pattern p = Pattern.compile("[^0-9]?01139942[^0-9]+");
         Matcher m = p.matcher(s);
         List<String> list = new ArrayList<>(1<<3);
-
         Set set = new HashSet(1<<3);
         //1. 能否初始化容量为10的hashmap
         System.out.println(tableSizeFor(17));

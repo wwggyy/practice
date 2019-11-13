@@ -1,4 +1,4 @@
-package com.valor.practice.design;
+package com.valor.practice.design.responsibility;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

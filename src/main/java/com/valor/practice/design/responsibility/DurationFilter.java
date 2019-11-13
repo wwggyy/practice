@@ -1,4 +1,4 @@
-package com.valor.practice.design;
+package com.valor.practice.design.responsibility;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-public class DurationFilter implements Filter{
+public class DurationFilter implements Filter {
     @Override
     public boolean filter(Task task) {
         log.info("时效性检验");
