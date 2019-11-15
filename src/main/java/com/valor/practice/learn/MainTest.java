@@ -7,7 +7,7 @@ import java.util.Optional;
 
 
 /**
- * @Description TODO
+ * @Description
  * @Author valor.wang
  * Date  2019-05-26 20:16
  **/
@@ -24,7 +24,6 @@ public class MainTest {
         System.out.println( defaulable.notRequired() );
         defaulable = DefaulableFactory.create( OverridableImpl::new );
         System.out.println( defaulable.notRequired() );
-
         //方法引用
         //1
         final Car car = Car.create( Car::new );
